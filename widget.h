@@ -5,6 +5,7 @@
 #include "mainwindow1.h"
 #include "mainwindow2.h"
 #include "mainwindow3.h"
+#include "mainwindow4.h"
 #include <QLineEdit>
 #include <QTextEdit>
 #include <QTextCodec>
@@ -29,6 +30,8 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+	void slot1();
+	
 private:
     Ui::Widget *ui;
 };

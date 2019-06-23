@@ -28,11 +28,17 @@ struct File {
 
 };
 
+extern string root_path;
+
 void getAllFiles(string path, string key, vector<File>& files, int operation);
 
 pair<int,int> countLen(string path);
 
-
 int found(string path, string key);
+
+int file_management(File file);
+
+
+
 
 #endif // HEADER_H

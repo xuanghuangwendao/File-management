@@ -183,12 +183,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="count.cpp" />
+    <ClCompile Include="file_management.cpp" />
     <ClCompile Include="found.cpp" />
     <ClCompile Include="get_file.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow1.cpp" />
     <ClCompile Include="mainwindow2.cpp" />
     <ClCompile Include="mainwindow3.cpp" />
+    <ClCompile Include="mainwindow4.cpp" />
+    <ClCompile Include="parameter.cpp" />
     <ClCompile Include="widget.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +222,12 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CustomBuild>
+    <QtMoc Include="mainwindow4.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\debug;\include;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\release;\include;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
     <ClInclude Include="ui_mainwindow1.h" />
     <ClInclude Include="ui_mainwindow2.h" />
     <ClInclude Include="ui_mainwindow3.h" />
@@ -236,6 +245,10 @@
     <QtUic Include="mainwindow3.ui">
       <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_mainwindow3.h</OutputFile>
       <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_mainwindow3.h</OutputFile>
+    </QtUic>
+    <QtUic Include="mainwindow4.ui">
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\ui_%(Filename).h</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\ui_%(Filename).h</OutputFile>
     </QtUic>
     <QtUic Include="widget.ui">
       <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_widget.h</OutputFile>

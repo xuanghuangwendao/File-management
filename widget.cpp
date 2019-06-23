@@ -46,3 +46,14 @@ void Widget::on_pushButton_4_clicked()
 {
     delete this;
 }
+
+
+void Widget::slot1() {
+	mainwindow4 *fun4 = new mainwindow4;
+	string title = "文档统计管理系统";
+	fun4->setWindowTitle(QString::fromLocal8Bit(title.data()));
+	fun4->show();
+	this->close();
+
+
+}

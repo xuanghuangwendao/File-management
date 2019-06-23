@@ -25,6 +25,7 @@ public:
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QLabel *label;
+    QPushButton *pushButton_5;
 
     void setupUi(QWidget *Widget)
     {
@@ -42,12 +43,16 @@ public:
         pushButton_3->setGeometry(QRect(250, 270, 100, 40));
         pushButton_4 = new QPushButton(Widget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(250, 330, 100, 40));
+        pushButton_4->setGeometry(QRect(250, 390, 100, 40));
         label = new QLabel(Widget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(110, 50, 550, 50));
+        pushButton_5 = new QPushButton(Widget);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(250, 330, 100, 40));
 
         retranslateUi(Widget);
+        QObject::connect(pushButton_5, SIGNAL(clicked()), Widget, SLOT(slot1()));
 
         QMetaObject::connectSlotsByName(Widget);
     } // setupUi
@@ -60,6 +65,7 @@ public:
         pushButton_3->setText(QApplication::translate("Widget", "\346\237\245\346\211\276\346\226\207\346\241\243", nullptr));
         pushButton_4->setText(QApplication::translate("Widget", "\351\200\200\345\207\272", nullptr));
         label->setText(QApplication::translate("Widget", "<html><head/><body><p><span style=\" font-size:22pt; font-weight:600;\">\346\226\207\346\241\243\346\237\245\350\257\242\347\256\241\347\220\206\347\263\273\347\273\237 V1.0</span></p></body></html>", nullptr));
+        pushButton_5->setText(QApplication::translate("Widget", "\347\256\241\347\220\206\346\226\207\346\241\243", nullptr));
     } // retranslateUi
 
 };

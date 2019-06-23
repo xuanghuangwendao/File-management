@@ -3,6 +3,7 @@
 
 void  getAllFiles(string path, string key, vector<File>& files, int operation) {
     //文件句柄
+	
     long long hFile = 0;
 	if (path[0] == 'f'&&path[1] == 'i') {
 		path = path.substr(8, path.size() - 8);
@@ -68,6 +69,22 @@ void  getAllFiles(string path, string key, vector<File>& files, int operation) {
 					}
 
 				}
+				else if (operation == 4) {
+					File file;
+					file.name = fileinfo.name;
+					file.path = p;
+					file.name_path = p.assign(path).append("\\").append(fileinfo.name);
+					file.size = fileinfo.size;
+					file.time_write = fileinfo.time_write;
+					file.time_create = fileinfo.time_create;
+					file.time_access = fileinfo.time_access;
+					file_management(file);
+
+
+				}
+
+
+
             }
         } while (_findnext(hFile, &fileinfo) == 0);  //寻找下一个，成功返回0，否则-1
         _findclose(hFile);

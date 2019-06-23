@@ -8,6 +8,5 @@ int main(int argc, char *argv[])
 	string title = "文档统计管理系统";
 	w.setWindowTitle(QString::fromLocal8Bit(title.data()));
     w.show();
-
     return a.exec();
 }
