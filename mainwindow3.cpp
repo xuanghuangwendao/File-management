@@ -5,6 +5,12 @@ MainWindow3::MainWindow3(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow3)
 {
+	setWindowIcon(QIcon("my.ico"));
+	QPalette palette(this->palette());
+
+	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
+	this->setPalette(palette);
+
     ui->setupUi(this);
 
 }
@@ -19,6 +25,7 @@ void MainWindow3::on_pushButton_clicked()
     Widget *main_ui = new Widget;
 	string title = "文档统计管理系统";
 	main_ui->setWindowTitle(QString::fromLocal8Bit(title.data()));
+
     main_ui->show();
     delete this;
 }

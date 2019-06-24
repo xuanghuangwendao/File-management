@@ -45,6 +45,7 @@ FORMS += \
     mainwindow2.ui \
     mainwindow3.ui
 
+	RC_FILE += my.rc
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

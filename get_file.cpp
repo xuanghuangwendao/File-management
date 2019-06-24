@@ -19,6 +19,7 @@ void  getAllFiles(string path, string key, vector<File>& files, int operation) {
 			}
 		}
 	}
+	
 		cout << path << endl;
     //文件信息
     struct _finddata_t fileinfo;  //很少用的文件信息读取结构

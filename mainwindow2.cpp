@@ -7,6 +7,12 @@ MainWindow2::MainWindow2(QWidget *parent) :
 {
 	string title = "文档统计管理系统";
 	setWindowTitle(QString::fromLocal8Bit(title.data()));
+
+	QPalette palette(this->palette());
+
+	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
+	this->setPalette(palette);
+
     ui->setupUi(this);
 }
 
@@ -17,6 +23,7 @@ MainWindow2::~MainWindow2()
 
 void MainWindow2::on_pushButton_clicked()
 {
+	setWindowIcon(QIcon("my.ico"));
     Widget *main_ui = new Widget;
 	string title = "文档统计管理系统";
 	main_ui->setWindowTitle(QString::fromLocal8Bit(title.data()));

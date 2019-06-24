@@ -87,6 +87,9 @@
     <QtMoc Include="widget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <ClInclude Include="resource.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -129,5 +132,11 @@
     <QtMoc Include="mainwindow4.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="my.ico" />
   </ItemGroup>
 </Project>

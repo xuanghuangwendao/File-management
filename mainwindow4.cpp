@@ -3,6 +3,12 @@
 mainwindow4::mainwindow4(QWidget *parent)
 	: QWidget(parent)
 {
+	setWindowIcon(QIcon("my.ico"));
+	QPalette palette(this->palette());
+
+	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
+	this->setPalette(palette);
+
 	ui.setupUi(this);
 }
 
@@ -26,6 +32,20 @@ void mainwindow4::slot2() {
 	string root = root_name.toStdString();
 	string key = key_word.toStdString();
 	root_path = key;
+	if (root_path[0] == 'f'&&root_path[1] == 'i') {
+		root_path = root_path.substr(8, root_path.size() - 8);
+		string temp = root_path;
+		root_path = "";
+		for (int i = 0; i < temp.size(); i++) {
+			if (temp[i] == '/') {
+				root_path += "\\";
+
+			}
+			else {
+				root_path += temp[i];
+			}
+		}
+	}
 	vector<File> vec;
 	cout << root << endl;
 	getAllFiles(root, key, vec, 4);
