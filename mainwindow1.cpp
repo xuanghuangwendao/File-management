@@ -9,6 +9,7 @@ MainWindow1::MainWindow1(QWidget *parent) :
 	string title = "文档统计管理系统";
 	setWindowTitle(QString::fromLocal8Bit(title.data()));
 	QPalette palette(this->palette());
+	palette.setColor(backgroundRole(), Qt::white);
 	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
 	this->setPalette(palette);
 

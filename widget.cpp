@@ -9,7 +9,7 @@ Widget::Widget(QWidget *parent) :
 	setWindowTitle(QString::fromLocal8Bit(title.data()));
 	setWindowIcon(QIcon("my.ico"));
 	QPalette palette(this->palette());
-
+	palette.setColor(backgroundRole(), Qt::white);
 	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
 	this->setPalette(palette);
 

@@ -1,2 +1,10 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>background.jpg</file>
+        <file>dog.jpg</file>
+        <file>my.ico</file>
+        <file>myico.rc</file>
+        <file>resour.qrc</file>
+        <file>Resource.rc</file>
+    </qresource>
+</RCC>

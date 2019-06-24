@@ -5,6 +5,7 @@ mainwindow4::mainwindow4(QWidget *parent)
 {
 	setWindowIcon(QIcon("my.ico"));
 	QPalette palette(this->palette());
+	palette.setColor(backgroundRole(), Qt::white);
 
 	palette.setBrush(backgroundRole(), QPixmap("background.jpg"));
 	this->setPalette(palette);
